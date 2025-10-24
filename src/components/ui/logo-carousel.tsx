@@ -48,7 +48,7 @@ const distributeLogos = (allLogos: Logo[], columnCount: number): Logo[][] => {
   return columns
 }
 
-const LogoColumn: React.FC<LogoColumnProps> = React.memo(
+const LogoColumn = React.memo<LogoColumnProps>(
   ({ logos, index, currentTime }) => {
     const cycleInterval = 2000
     const columnDelay = index * 200
@@ -105,7 +105,9 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
       </motion.div>
     )
   }
-)
+);
+
+LogoColumn.displayName = 'LogoColumn';
 
 interface LogoCarouselProps {
   columnCount?: number

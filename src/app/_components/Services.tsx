@@ -102,17 +102,15 @@ export default function Services() {
 		<section className="py-20 md:py-32 bg-[#1F3A44] relative overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00B5AD]/5 to-transparent pointer-events-none" />
 			
-			<div className="absolute inset-0 opacity-5 pointer-events-none">
-				<Calendar className="absolute top-32 left-[10%] w-20 h-20 text-[#FFC300] animate-pulse" style={{ animationDelay: '0s' } as any} />
-				<Share2 className="absolute top-20 right-[15%] w-16 h-16 text-[#00B5AD] animate-pulse" style={{ animationDelay: '1s' } as any} />
-				<Target className="absolute bottom-32 left-[20%] w-24 h-24 text-[#FFC300] animate-pulse" style={{ animationDelay: '2s' } as any} />
-				<Video className="absolute top-[50%] right-[25%] w-18 h-18 text-[#00B5AD] animate-pulse" style={{ animationDelay: '3s' } as any} />
-				<Palette className="absolute bottom-24 right-[12%] w-16 h-16 text-[#FFC300] animate-pulse" style={{ animationDelay: '4s' } as any} />
-				<TrendingUp className="absolute top-[60%] left-[15%] w-16 h-16 text-[#00B5AD] animate-pulse" style={{ animationDelay: '5s' } as any} />
-				<Users className="absolute bottom-40 right-[30%] w-20 h-20 text-[#FFC300] animate-pulse" style={{ animationDelay: '6s' } as any} />
-			</div>
-
-			<motion.div
+	<div className="absolute inset-0 opacity-5 pointer-events-none">
+		<Calendar className="absolute top-32 left-[10%] w-20 h-20 text-[#FFC300] animate-pulse" style={{ animationDelay: '0s' } as React.CSSProperties} />
+		<Share2 className="absolute top-20 right-[15%] w-16 h-16 text-[#00B5AD] animate-pulse" style={{ animationDelay: '1s' } as React.CSSProperties} />
+		<Target className="absolute bottom-32 left-[20%] w-24 h-24 text-[#FFC300] animate-pulse" style={{ animationDelay: '2s' } as React.CSSProperties} />
+		<Video className="absolute top-[50%] right-[25%] w-18 h-18 text-[#00B5AD] animate-pulse" style={{ animationDelay: '3s' } as React.CSSProperties} />
+		<Palette className="absolute bottom-24 right-[12%] w-16 h-16 text-[#FFC300] animate-pulse" style={{ animationDelay: '4s' } as React.CSSProperties} />
+		<TrendingUp className="absolute top-[60%] left-[15%] w-16 h-16 text-[#00B5AD] animate-pulse" style={{ animationDelay: '5s' } as React.CSSProperties} />
+		<Users className="absolute bottom-40 right-[30%] w-20 h-20 text-[#FFC300] animate-pulse" style={{ animationDelay: '6s' } as React.CSSProperties} />
+	</div>			<motion.div
 				className="absolute top-20 right-10 w-72 h-72 rounded-full bg-[#FFC300]/10 blur-3xl"
 				animate={{
 					scale: [1, 1.2, 1],
@@ -184,7 +182,7 @@ interface ServiceCardProps {
 	feature: {
 		key: string;
 		title: string;
-		icon: any;
+		icon: React.ComponentType<{ className?: string }>;
 		description: string;
 		gradient: string;
 		iconBg: string;

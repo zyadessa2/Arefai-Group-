@@ -7,6 +7,7 @@ import enTranslations from '@/locales/en.json';
 type Language = 'ar' | 'en';
 
 interface Translations {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 

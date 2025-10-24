@@ -360,7 +360,10 @@ interface ServiceItemProps {
   secondaryIcon?: React.ReactNode
   title: string
   description: string
-  variants: any
+  variants: {
+    hidden?: { opacity: number; x?: number; y?: number };
+    visible?: { opacity: number; x?: number; y?: number };
+  }
   delay: number
   direction: "left" | "right"
 }
