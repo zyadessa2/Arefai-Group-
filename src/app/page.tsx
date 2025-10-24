@@ -10,12 +10,20 @@ export default function Home() {
   return (
     <main>
       <DemoHeroGeometric />
-      <AboutUs />
-      <Services />
-      <Portfolio />
+      <div id="about">
+        <AboutUs />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+      <div id="portfolio">
+        <Portfolio />
+      </div>
       <Clients />
       <VortexDemoSecond />
-      <ContactUs />
+      <div id="contact">
+        <ContactUs />
+      </div>
     </main>
   );
 }

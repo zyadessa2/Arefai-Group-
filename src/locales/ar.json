@@ -57,10 +57,10 @@
   },
   "nav": {
     "home": "الرئيسية",
-    "services": "الخدمات",
-    "about": "من نحن",
+    "aboutUs": "من نحن",
+    "services": "خدماتنا",
     "portfolio": "أعمالنا",
-    "contact": "تواصل معنا"
+    "contactUs": "تواصل معنا"
   },
   "services": {
     "badge": "خدماتنا",

@@ -57,10 +57,10 @@
   },
   "nav": {
     "home": "Home",
+    "aboutUs": "About Us",
     "services": "Services",
-    "about": "About Us",
     "portfolio": "Portfolio",
-    "contact": "Contact Us"
+    "contactUs": "Contact Us"
   },
   "services": {
     "badge": "Our Services",

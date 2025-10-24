@@ -13,19 +13,26 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function NavbarDemo() {
+  const { t } = useLanguage();
+  
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: t.nav.aboutUs,
+      link: "#about",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: t.nav.services,
+      link: "#services",
     },
     {
-      name: "Contact",
+      name: t.nav.portfolio,
+      link: "#portfolio",
+    },
+    {
+      name: t.nav.contactUs,
       link: "#contact",
     },
   ];
