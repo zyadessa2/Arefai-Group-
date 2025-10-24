@@ -1,26 +1,305 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-cairo), var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-arabic: var(--font-cairo);
+  --font-rakkas: var(--font-rakkas);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.625rem;
+  /* Custom Theme Colors */
+  --dark-bg: #1F3A44;           /* اللون الداكن للخلفية */
+  --white-text: #FFFFFF;        /* اللون الأبيض للنصوص */
+  --golden-cta: #FFC300;        /* اللون الذهبي للأزرار */
+  --teal-accent: #00B5AD;       /* اللون الأخضر البحري للكروت */
+  
+  /* Theme Variables */
+  --background: #1F3A44;        /* خلفية داكنة */
+  --foreground: #FFFFFF;        /* نص أبيض */
+  --card: #00B5AD;             /* كروت بخلفية تيل */
+  --card-foreground: #FFFFFF;   /* نص الكروت أبيض */
+  --popover: #1F3A44;
+  --popover-foreground: #FFFFFF;
+  --primary: #FFC300;          /* الأزرار الأساسية ذهبية */
+  --primary-foreground: #1F3A44; /* نص الأزرار داكن */
+  --secondary: #00B5AD;        /* الأزرار الثانوية تيل */
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A4A54;           /* نسخة أفتح من الداكن */
+  --muted-foreground: #B0B0B0;
+  --accent: #00B5AD;          /* لون التمييز */
+  --accent-foreground: #FFFFFF;
+  --destructive: #FF4444;
+  --border: #00B5AD;          /* حدود بلون التيل */
+  --input: #2A4A54;
+  --ring: #FFC300;           /* حلقة التركيز ذهبية */
+  --chart-1: #FFC300;
+  --chart-2: #00B5AD;
+  --chart-3: #1F3A44;
+  --chart-4: #FFFFFF;
+  --chart-5: #2A4A54;
+  --sidebar: #1F3A44;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FFC300;
+  --sidebar-primary-foreground: #1F3A44;
+  --sidebar-accent: #00B5AD;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #00B5AD;
+  --sidebar-ring: #FFC300;
+}
+
+.dark {
+  /* نفس الألوان للـ dark mode */
+  --background: #1F3A44;
+  --foreground: #FFFFFF;
+  --card: #00B5AD;
+  --card-foreground: #FFFFFF;
+  --popover: #1F3A44;
+  --popover-foreground: #FFFFFF;
+  --primary: #FFC300;
+  --primary-foreground: #1F3A44;
+  --secondary: #00B5AD;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A4A54;
+  --muted-foreground: #B0B0B0;
+  --accent: #00B5AD;
+  --accent-foreground: #FFFFFF;
+  --destructive: #FF4444;
+  --border: #00B5AD;
+  --input: #2A4A54;
+  --ring: #FFC300;
+  --chart-1: #FFC300;
+  --chart-2: #00B5AD;
+  --chart-3: #1F3A44;
+  --chart-4: #FFFFFF;
+  --chart-5: #2A4A54;
+  --sidebar: #1F3A44;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FFC300;
+  --sidebar-primary-foreground: #1F3A44;
+  --sidebar-accent: #00B5AD;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #00B5AD;
+  --sidebar-ring: #FFC300;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Theme Classes */
+.hero-bg {
+  background-color: var(--dark-bg, #1F3A44);
+  color: var(--white-text, #FFFFFF);
+}
+
+.services-bg {
+  background-color: var(--dark-bg, #1F3A44);
+  color: var(--white-text, #FFFFFF);
+}
+
+.content-section {
+  background-color: var(--dark-bg, #1F3A44);
+  color: var(--white-text, #FFFFFF);
+}
+
+.cta-button {
+  background-color: var(--golden-cta, #FFC300);
+  color: var(--dark-bg, #1F3A44);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #E6AF00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 195, 0, 0.3);
+}
+
+.service-card {
+  background-color: var(--teal-accent, #00B5AD);
+  color: var(--white-text, #FFFFFF);
+  border: 2px solid var(--teal-accent, #00B5AD);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: #009A92;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 181, 173, 0.2);
+}
+
+.testimonial-card {
+  background-color: transparent;
+  border: 2px solid var(--teal-accent, #00B5AD);
+  color: var(--white-text, #FFFFFF);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  background-color: var(--teal-accent, #00B5AD);
+  background-color: rgba(0, 181, 173, 0.1);
+}
+
+.text-primary {
+  color: var(--white-text, #FFFFFF) !important;
+}
+
+.text-golden {
+  color: var(--golden-cta, #FFC300) !important;
+}
+
+.text-teal {
+  color: var(--teal-accent, #00B5AD) !important;
+}
+
+.border-teal {
+  border-color: var(--teal-accent, #00B5AD) !important;
+}
+
+.bg-dark-theme {
+  background-color: var(--dark-bg, #1F3A44) !important;
+}
+
+/* Arabic Typography */
+.font-cairo {
+  font-family: var(--font-cairo), var(--font-tajawal), 'Cairo', 'Tajawal', sans-serif;
+}
+
+.font-rakkas {
+  font-family: var(--font-rakkas), 'Rakkas', 'Amiri', cursive;
+  font-weight: 400;
+}
+
+.arabic-text {
+  font-family: var(--font-cairo), var(--font-tajawal), 'Cairo', 'Tajawal', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+/* English Typography */
+.font-inter {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+}
+
+/* Dynamic Typography based on language */
+[lang="ar"] .hero-title,
+[dir="rtl"] .hero-title {
+  font-family: var(--font-cairo), var(--font-tajawal), 'Cairo', 'Tajawal', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+[lang="en"] .hero-title,
+[dir="ltr"] .hero-title {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+[lang="ar"] .hero-subtitle,
+[dir="rtl"] .hero-subtitle {
+  font-family: var(--font-cairo), var(--font-tajawal), 'Cairo', 'Tajawal', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+[lang="en"] .hero-subtitle,
+[dir="ltr"] .hero-subtitle {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.005em;
+}
+
+[lang="ar"] .button-text,
+[dir="rtl"] .button-text {
+  font-family: var(--font-cairo), var(--font-tajawal), 'Cairo', 'Tajawal', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+}
+
+[lang="en"] .button-text,
+[dir="ltr"] .button-text {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.button-text {
+  font-weight: 600;
+}
+
+/* RTL Support */
+[dir="rtl"] .text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .flex-row-reverse {
+  flex-direction: row-reverse;
 }

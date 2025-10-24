@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "badge": "Alrefai Group",
+    "title1": "Transform Your Vision Into",
+    "title2": "Tangible Digital Success",
+    "subtitle": "Using the latest digital marketing techniques and data analysis, we help you reach your target audience precisely and achieve the highest return on investment (ROI).",
+    "ctaPrimary": "Start Your Journey",
+    "ctaSecondary": "Explore Our Services",
+    "stats": {
+      "clients": "+500 Happy Clients",
+      "projects": "+1000 Successful Projects",
+      "experience": "7 Years Experience"
+    }
+  },
+  "about": {
+    "badge": "Discover Our Story",
+    "title": "About Us",
+    "subtitle": "Alrefai: Because We Believe Your Story Deserves to Be Told",
+    "description": "Alrefai Marketing was founded on a simple vision: successful marketing is not just advertising, it's the art of building relationships and sustainable growth. Our mission is to empower businesses to achieve their full digital potential.",
+    "values": {
+      "transparency": {
+        "title": "Complete Transparency",
+        "description": "We believe trust is the foundation of success. All your data, analytics, and reports are fully accessible and transparent."
+      },
+      "strategy": {
+        "title": "Strategic Thinking",
+        "description": "We don't offer ready-made solutions. We customize our strategy to fit your unique goals and market challenges."
+      },
+      "datadriven": {
+        "title": "Data-Driven Growth",
+        "description": "Our decisions are based on numbers. We focus on metrics that truly matter to your business: Return on Investment."
+      },
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "We use the latest digital marketing techniques to ensure you outperform your competitors in the market."
+      },
+      "professionalism": {
+        "title": "Professionalism & Commitment",
+        "description": "Our team of experts has the passion and knowledge needed to deliver the highest level of service."
+      },
+      "partnership": {
+        "title": "Partnership for Growth",
+        "description": "We don't sell services; we offer a genuine partnership aimed at your sustainable growth and success."
+      }
+    },
+    "stats": {
+      "projects": "Successful Projects",
+      "clients": "Happy Clients",
+      "experience": "Years Experience",
+      "satisfaction": "Satisfaction Rate"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Brand?",
+      "subtitle": "Let's create success together",
+      "button": "Get Started"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "portfolio": "Portfolio",
+    "contact": "Contact Us"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "Complete Marketing Solutions",
+    "subtitle": "We offer a comprehensive range of digital marketing services designed specifically to achieve your business goals",
+    "items": {
+      "strategy": {
+        "title": "Monthly Marketing Strategy & Planning",
+        "description": "We create a comprehensive marketing strategy and professional content plan tailored to your brand's goals and objectives."
+      },
+      "mediaProduction": {
+        "title": "Integrated Media Production Plan",
+        "description": "Customized plan for visual production and creative content to ensure unified visual messaging with your overall marketing identity."
+      },
+      "socialMedia": {
+        "title": "Social Media Management & Development",
+        "description": "Professional management of all your accounts across digital platforms (Facebook – Instagram – TikTok – Google – Snapchat – X) with engaging content."
+      },
+      "adsManagement": {
+        "title": "Paid Advertising Campaign Management",
+        "description": "Management and optimization of paid advertising campaigns (Ads Management & Optimization) to achieve the highest return on investment (ROI)."
+      },
+      "contentCreation": {
+        "title": "Content Writing & Creative Design",
+        "description": "Professional team for engaging content writing and creative design that reflects your brand identity and captivates your audience."
+      },
+      "moderation": {
+        "title": "Daily Moderation & Customer Care",
+        "description": "Continuous moderation service and instant responses to customer inquiries (Moderation & Customer Care) to build strong relationships with your audience."
+      },
+      "branding": {
+        "title": "Digital Visual Identity Development",
+        "description": "Development and enhancement of visual identity and comprehensive digital presence for your brand to be distinctive and memorable."
+      }
+    },
+    "cta": "Explore More"
+  },
+  "clients": {
+    "badge": "Success Partners",
+    "title": "Our Proud Clients",
+    "subtitle": "Trusted by leading brands worldwide"
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Ready to Get Started?",
+    "subtitle": "Let's build a successful marketing strategy together. Contact us today for a free consultation",
+    "email": {
+      "title": "Email",
+      "description": "We respond to all emails within 24 hours",
+      "address": "info@al-refaigroup.com"
+    },
+    "phone": {
+      "title": "Phone",
+      "description": "We're available Saturday-Thursday, 9am-6pm",
+      "primary": "01111173103",
+      "secondary": ""
+    },
+    "office": {
+      "title": "Office",
+      "description": "Visit us at our headquarters",
+      "address": "Benha - El Tora'a Street - Above Mohamed Zein Pharmacy"
+    },
+    "social": {
+      "title": "Follow us on social media",
+      "facebook": "Facebook",
+      "facebookUrl": "https://www.facebook.com/share/1BU1Y1epNe/",
+      "tiktok": "TikTok",
+      "tiktokUrl": "https://www.tiktok.com/@alrefaiigroup?_t=ZS-90g8jgcowgn&_r=1",
+      "instagram": "Instagram",
+      "instagramUrl": "https://www.instagram.com/alrefaigroup?igsh=NWp5Ym1hcXZvdGM=",
+      "behance": "Behance",
+      "behanceUrl": "https://www.behance.net/alrefaigroup"
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Join hundreds of successful companies that chose Alrefai Group",
+    "description": "Get a free consultation and discover how we can help you achieve your marketing goals",
+    "button": "Start Free Now"
+  }
+}
